@@ -1,0 +1,101 @@
+.photos {
+    &__header {
+        max-width: 350px;
+        margin: 0 auto;
+        margin: 4% auto 5%;
+    }
+    h2 {
+        border-bottom: 5px solid rgba(255, 198, 0, 1);
+    }
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 100px);
+        grid-auto-rows: 100px;
+        grid-auto-flow: dense;
+        &--photo {
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: 1;
+            grid-template-rows: 1;
+
+            img {
+                grid-column: 1 / -1;
+                grid-row: 1 / -1;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            .overlay {
+                background: rgba(255, 198, 0, 0.5)
+                grid-column: 1 / -1;
+                grid-row: 1 / -1;
+                position: relative;
+                display: grid;
+                justify-items: center;
+                align-items: center;
+                
+                transition: all 0.2s;
+                transform: translateY(100%);
+                button {
+                    background: none;
+                    border: 2px solid #fff;
+                    color: #fff;
+                    text-transform: uppercase;
+                    padding: 5px;
+                }
+
+            }
+        }
+        &--photo:hover .overlay {
+            transform: translateY(0);
+        }
+        .v2 {
+            grid-row: span 2;
+         }
+        .v3 {
+            grid-row: span 3;
+         }
+        .v4 {
+            grid-row: span 4;
+         }
+        .h2 {
+            grid-column: span 2;
+         }
+        .h3 {
+            grid-column: span 3;
+         }
+        .h4 {
+            grid-column: span 4;
+         }
+    }
+}
+
+    .single__overlay {
+      position: fixed;
+      background: rgba(0, 0, 0, 0.7);
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      display: none;
+      z-index: 2;
+      .close {
+          background: none;
+          border: 0;
+          display: block;
+          color: #22313F;
+      }
+      &--inner {
+        background: white;
+        width: 700px;
+        padding: 20px;
+      }
+      img {
+          width: 100%;
+      }
+    }
+    .open {
+        display: grid;
+        align-items: center;
+        justify-items: center;
+    }
