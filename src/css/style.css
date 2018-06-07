@@ -364,6 +364,11 @@ input::-moz-focus-inner {
   width: 700px;
   padding: 20px;
 }
+@media all and (max-width: 1000px) {
+  .single__overlay--inner {
+    max-width: 300px;
+  }
+}
 .single__overlay img {
   width: 100%;
 }

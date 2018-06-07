@@ -86,7 +86,7 @@ class App extends React.Component {
           <div className="content">
             <div className="inner">
               <div className="cities">
-                <h2>Search for Your City</h2>
+                <h2>Search for Your City in U.S.</h2>
                 <div className="search">
                   <form className="search__cities" onSubmit={this.handleSubmit}>
                     <input type="text" 
